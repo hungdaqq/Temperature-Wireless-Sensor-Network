@@ -55,7 +55,7 @@
 <p align="justify">
 Temperature monitoring is a crucial aspect in various industries such as agriculture, food processing, and storage. Traditional temperature monitoring systems are often wired and can be costly to install, particularly in large facilities or areas with numerous temperature-sensitive zones. This project aims to demonstrate the feasibility of temperature monitoring using the ESP8266 microcontroller and the PainlessMesh library to create a wireless sensor network. The system is designed to provide real-time temperature data from remote sensors to a central control unit for easy monitoring and analysis. Below are the project requirements: </p>
 
-- About networking protocols: MQTT or CoAP for the devices to the Gateway/Edge and HTTP for the Gateway/Edge to the Cloud server.
+- Measuring range: 25oC 125oC, Accuracy: 1&degC, Display resolution: 0.1oC
 - Device communication: WiFi.
 - Sensor devices must be operated in power-saving mode.
 - User interface: Mobile application or browser.
