@@ -53,13 +53,16 @@
 ## About The Project
 
 <p align="justify">
-Temperature monitoring is a crucial aspect in various industries such as agriculture, food processing, and storage. Traditional temperature monitoring systems are often wired and can be costly to install, particularly in large facilities or areas with numerous temperature-sensitive zones. This project aims to demonstrate the feasibility of temperature monitoring using the ESP8266 microcontroller and the PainlessMesh library to create a wireless sensor network. The system is designed to provide real-time temperature data from remote sensors to a central control unit for easy monitoring and analysis. Below are the project requirements: </p>
+Temperature monitoring is a crucial aspect in various industries such as agriculture, food processing, and storage. Traditional temperature monitoring systems are often wired and can be costly to install, particularly in large facilities or areas with numerous temperature-sensitive zones. This project aims to demonstrate the feasibility of temperature monitoring using the ESP8266 microcontroller and the PainlessMesh library to create a wireless sensor network. The system is designed to provide real-time temperature data from remote sensors to a central control unit for easy monitoring and analysis. Below are the project requirements:
 
-- Measuring range: 25oC 125oC, Accuracy: 1&degC, Display resolution: 0.1oC
-- Device communication: WiFi.
-- Sensor devices must be operated in power-saving mode.
-- User interface: Mobile application or browser.
-- Intranet control and Internet-based control.
+- Measuring range: 25°C to 125°C, Accuracy: ±1°C, Display resolution: 0.1°C.
+- Powrer source: using battery, Live time: 4h (advanced: 8h), the battery can be recharged directly or removable.
+- Dimensions: 70x50x100 mm, Weight: <150g.
+- Time to measure a sample: <20s. (advanced <5s)
+- Computer connection: RF Transmission distance within 20m from measuring devices to RF receiving station with power and network connection.
+- Minimum management for 10 measuring devices. (advanced: the option to expand the number of devices with the distance from the device to the receiving station can be up to 100m)
+- Computer software: collect measured values from measuring devices, manage data, export reports in excel format, interface according to unified form.
+- User's manipulation: button to start measuring; Temperature threshold LEDs (3 LEDs); Temperature thresholds can be updated from a PC
 
 <!-- GETTING STARTED -->
 ## Getting Started
