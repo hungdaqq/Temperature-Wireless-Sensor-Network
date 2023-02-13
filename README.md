@@ -56,13 +56,13 @@
 Temperature monitoring is a crucial aspect in various industries such as agriculture, food processing, and storage. Traditional temperature monitoring systems are often wired and can be costly to install, particularly in large facilities or areas with numerous temperature-sensitive zones. This project aims to demonstrate the feasibility of temperature monitoring using the ESP8266 microcontroller and the PainlessMesh library to create a wireless sensor network. The system is designed to provide real-time temperature data from remote sensors to a central control unit for easy monitoring and analysis. Below are the project requirements:
 
 - Measuring range: 25°C to 125°C, Accuracy: ±1°C, Display resolution: 0.1°C.
-- Powrer source: using battery, Live time: 4h (advanced: 8h), the battery can be recharged directly or removable.
+- Powrer source: rechargeable battery with a live time of 4 hours (8 hours with advanced battery)
 - Dimensions: 70x50x100 mm, Weight: <150g.
 - Time to measure a sample: <20s. (advanced <5s)
-- Computer connection: RF Transmission distance within 20m from measuring devices to RF receiving station with power and network connection.
-- Minimum management for 10 measuring devices. (advanced: the option to expand the number of devices with the distance from the device to the receiving station can be up to 100m)
-- Computer software: collect measured values from measuring devices, manage data, export reports in excel format, interface according to unified form.
-- User's manipulation: button to start measuring; Temperature threshold LEDs (3 LEDs); Temperature thresholds can be updated from a PC
+- Computer connection: RF Transmission distance of up to 20 meters from measuring devices to the RF receiving station with power and network connection.
+- Ability to manage a minimum of 10 measuring devices (expandable to 100 meters with advanced setup).
+- Computer software: Collects measured values, manages data, exports reports in excel format, and has a user-friendly interface.
+- User's manipulation: Start button, temperature threshold LEDs (3 LEDs), and the ability to update temperature thresholds from a computer
 
 <!-- GETTING STARTED -->
 ## Getting Started
