@@ -128,7 +128,7 @@ void setup() {
   mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
   mesh.onNodeDelayReceived(&delayReceivedCallback);
   // for OTA update: node role AP
-  mesh.initOTAReceive("APnode");
+  mesh.initOTAReceive("apnode");
   // set scheduler for task send message: 60s
   taskInterval = 60;
   userScheduler.addTask( taskSendMessage );

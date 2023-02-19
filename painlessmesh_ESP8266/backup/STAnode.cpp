@@ -43,7 +43,7 @@ void setup() {
   mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | COMMUNICATION );
   mesh.init( MESH_PREFIX, MESH_PASSWORD, MESH_PORT, WIFI_STA);
   mesh.onNewConnection(&newConnectionCallback);
-  mesh.initOTAReceive("STAnode");
+  mesh.initOTAReceive("stanode");
 }
 // program loop
 void loop() {

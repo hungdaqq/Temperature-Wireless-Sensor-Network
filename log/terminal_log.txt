@@ -844,3 +844,14 @@ setLogLevel: ERROR |
 {"event":"change","nodeTime":4230397614,"time":"2023-02-19T18:00:00", "layout":{"nodeId":4263658897,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":840640289,"subs":[{"nodeId":2224952961}]}]}]}}
 {"event":"receive","nodeTime":4235051878,"time":"2023-02-19T18:00:04","nodeId":840640289,"msg":"22.6875"}
 {"event":"change","nodeTime":4240252912,"time":"2023-02-19T18:00:10", "layout":{"nodeId":4263658897,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":840640289}]}]}}
+{"event":"receive","nodeTime":4263853873,"time":"2023-02-19T18:00:33","nodeId":3896290393,"msg":"23.8125"}
+{"event":"change","nodeTime":4266136990,"time":"2023-02-19T18:00:35", "layout":{"nodeId":4263658897,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":840640289,"subs":[{"nodeId":976460655}]}]}]}}
+{"event":"receive","nodeTime":4266644243,"time":"2023-02-19T18:00:36","nodeId":976460655,"msg":"24.0625"}
+{"event":"offset","nodeTime":4268909747,"time":"2023-02-19T18:00:38","offset":-921}
+{"event":"offset","nodeTime":4268952346,"time":"2023-02-19T18:00:38","offset":500}
+{"event":"change","nodeTime":4280270038,"time":"2023-02-19T18:00:50", "layout":{"nodeId":4263658897,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":840640289,"subs":[{"nodeId":976460655},{"nodeId":2224952961}]}]}]}}
+{"event":"receive","nodeTime":4280567587,"time":"2023-02-19T18:00:50","nodeId":2224952961,"msg":"23.1875"}
+{"event":"receive","nodeTime":4281763909,"time":"2023-02-19T18:00:51","nodeId":762290248,"msg":"23.6250"}
+{"event":"change","nodeTime":4290195834,"time":"2023-02-19T18:01:00", "layout":{"nodeId":4263658897,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":840640289,"subs":[{"nodeId":2224952961}]}]}]}}
+{"event":"receive","nodeTime":347729,"time":"2023-02-19T18:01:05","nodeId":840640289,"msg":"22.6875"}
+{"event":"change","nodeTime":5160441,"time":"2023-02-19T18:01:09", "layout":{"nodeId":4263658897,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":840640289}]}]}}
