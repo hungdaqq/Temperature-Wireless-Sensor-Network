@@ -3,13 +3,15 @@
 #include <DallasTemperature.h>
 #include <Led4digit74HC595.h>
 #include <string.h>
-
+// define MESH prefix, password and port
 #define   MESH_PREFIX     "CORDYCEPS"
 #define   MESH_PASSWORD   "12345678"
 #define   MESH_PORT       5555
-
+// define MESH
+painlessMesh  mesh;
+// define LED 7seg
 Led4digit74HC595 display(D1,D2,D3);
-
+// define led and button pin
 #define BUTTON D5
 #define RED D6
 #define YELLOW D7
@@ -18,26 +20,24 @@ Led4digit74HC595 display(D1,D2,D3);
 const int red = 60;
 const int yellow = 40;
 const int green = 20;
-
+// define temoerature sensor
 const int oneWireBus = D4; 
 OneWire oneWire(oneWireBus);
 DallasTemperature sensors(&oneWire);
 float temperature;
-
+// state parameters
 bool state = false;
 bool oldState = false;
-
-
-Scheduler userScheduler;
-painlessMesh  mesh;
-
 bool calc_delay = true;
 SimpleList<uint32_t> nodes;
 bool connect = false;
 int taskInterval;
-void sendMessage();
-Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
 
+void sendMessage();
+// define task send message and scheduler
+Scheduler userScheduler;
+Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
+//set led function
 void setLight(char STATE){
   if (STATE == 'g') {
     digitalWrite(GREEN, HIGH);
@@ -65,7 +65,7 @@ void setLight(char STATE){
     digitalWrite(GREEN, HIGH);       
   }
 }
-
+// send message funtion
 void sendMessage(){
   if(connect) {
     // get sensor temperature
@@ -95,7 +95,7 @@ void sendMessage(){
     taskSendMessage.setInterval(TASK_SECOND * taskInterval);
   }
 }
-
+// callback function
 void receivedCallback( uint32_t from, String &msg ) {}
 void nodeTimeAdjustedCallback(int32_t offset) {}
 void delayReceivedCallback(uint32_t from, int32_t delay) {}
@@ -110,22 +110,26 @@ void newConnectionCallback(uint32_t nodeId) {
 void changedConnectionCallback() {}
 void setup() {
   Serial.begin(115200);
+  // pinout for threshold led and press button
   pinMode(GREEN, OUTPUT);
   pinMode(RED, OUTPUT);
   pinMode(YELLOW, OUTPUT);
   pinMode(BUTTON, INPUT);
-
+  // set decimal point of 7seg LED display
   display.setDecimalPoint(2); 
+  // init the mesh
   mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | COMMUNICATION );
   mesh.init( MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT);
+  // callback for updating the mesh
   mesh.onReceive(&receivedCallback);
   mesh.onNewConnection(&newConnectionCallback);
   mesh.onChangedConnections(&changedConnectionCallback);
   mesh.onDroppedConnection(&droppedConnectionCallback);
   mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
   mesh.onNodeDelayReceived(&delayReceivedCallback);
-
+  // for OTA update: node role AP
   mesh.initOTAReceive("APnode");
+  // set scheduler for task send message: 60s
   taskInterval = 60;
   userScheduler.addTask( taskSendMessage );
   taskSendMessage.enable();
