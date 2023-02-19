@@ -1,0 +1,12 @@
+[submodule "libs/painlessMesh"]
+	path = libs/painlessMesh
+	url = https://gitlab.com/painlessMesh/painlessMesh.git
+[submodule "libs/ArduinoJson"]
+	path = libs/ArduinoJson
+	url = https://github.com/bblanchon/ArduinoJson.git
+[submodule "libs/TaskScheduler"]
+	path = libs/TaskScheduler
+	url = https://github.com/arkhipenko/TaskScheduler.git
+[submodule "libs/uuid"]
+	path = libs/uuid
+	url = https://github.com/boostorg/uuid.git

@@ -1,0 +1,10 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: normal
+
+build_testing:
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake
+    - apt-get install libboost-system-dev libboost-thread-dev libboost-regex-dev libboost-program-options-dev libboost-chrono-dev libboost-date-time-dev libboost-atomic-dev libboost-filesystem-dev -y -qq
+    - cmake . -DCMAKE_CXX_FLAGS="-Wall -Werror"
+  script:
+    - make
