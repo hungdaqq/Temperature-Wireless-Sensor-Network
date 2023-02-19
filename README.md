@@ -107,7 +107,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Quang Hung Dang - [@hungdaqq](https://www.linkedin.com/in/hungdaqq/) - hungdaqq@gmail.com
 
-Project Link: [https://github.com/hungdaqq/Smarthome-IoT/](https://github.com/hungdaqq/Smarthome-IoT/)
+Project Link: [https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network)
 
 
 <!-- ACKNOWLEDGMENTS -->
