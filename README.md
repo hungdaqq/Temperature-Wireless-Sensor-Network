@@ -88,8 +88,8 @@ Before getting started with the project, you will need the following:
    ```
 2. Setting up micro controllers programming environment in [painlessmesh_ESP8266](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmesh_ESP8266).
 3. Follow [Nodes](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Features) to program sensor nodes, connect the electronics components in accordance with the hardware schema and configure the wireless mesh network.
-4. Follow to set up boost client and upload data to Google Sheet via Google API.
-5. For online firmware updates, please refer to [OTA](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/OTA) for sensor nodes over-the-air firmware updating instrucion, [painlessmeshboost](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmeshboost) for setting up boost client.
+4. Follow [painlessmeshboost](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmeshboost) to set up boost client and upload data to Google Sheet via Google API.
+5. For online firmware updates, please refer to [OTA](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/OTA).
 
 <!-- CONTRIBUTING -->
 ## Contributing
