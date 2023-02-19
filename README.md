@@ -38,8 +38,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -86,37 +84,9 @@ Before getting started with the project, you will need the following:
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/hungdaqq/Smarthome-IoT.git
+   https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network.git
    ```
-2. Create a Thingsboard account at https://demo.thingsboard.io/ and login to use Thingsboard Live Demo server. Then go to [Thingsboard](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Thingsboard) for a quick overview of this open-source IoT platform.
-3. Follow the instructions to install [Thingsboard Edge CE](https://thingsboard.io/docs/user-guide/install/edge/installation-options/) v3.4.3 and provision your Edge to the Server.
-4. Get and install the ThingsBoardLive on [App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695) or [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app&hl=vi&gl=US).
-5. Please refer to [painlessmesh_ESP8266](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmesh_ESP8266) for setting up micro controllers programming environment, [Nodes](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Features) for configuring the wireless mesh network, [OTA](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/OTA) for sensor nodes over-the-air firmware updating instrucion, [painlessmeshboost](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmeshboost) for setting up boost client.
-6. (Optional) Follow the instructions to install [Thingsboard IoT Gateway](https://thingsboard.io/docs/iot-gateway/installation/) v2.9 on your Raspberry Pi or PC if you want integrate devices that are connected to legacy and third-party systems with ThingsBoard IoT platform. For example: external MQTT brokers, OPC-UA servers, Sigfox Backend, Modbus slaves or CAN nodes.
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-1. Start Edge service by running the script:
-   ```sh
-   sudo service tb-edge start
-   ```
-2. Access the user interface by opening a web browser and navigating to https://demo.thingsboard.io/home or using ThingsBoardLive mobile application.
-3. Use the interface to control the devices and other features in your home.
-
-
-<!-- ROADMAP -->
-## Roadmap and Future work
-
-- [x] Indoor temperature monitoring
-- [x] Outdoor temperature, humidity monitoring (with OpenWeather API)
-- [x] Light and Household applicances control
-- [x] Create alarms, send emails and notifications.
-- [ ] Power consumption and charging monitoring
-- [ ] Devices claming (QR code)
-- [ ] Data analytics with Trendz
-
-See the [open issues](https://github.com/hungdaqq/Smarthome-IoT/issues) for a full list of proposed features (and known issues).
+2. Please refer to [painlessmesh_ESP8266](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmesh_ESP8266) for setting up micro controllers programming environment, [Nodes](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Features) for configuring the wireless mesh network, [OTA](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/OTA) for sensor nodes over-the-air firmware updating instrucion, [painlessmeshboost](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmeshboost) for setting up boost client.
 
 <!-- CONTRIBUTING -->
 ## Contributing
