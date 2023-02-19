@@ -79,8 +79,8 @@ Before getting started with the project, you will need the following:
 | Hardware | Software |
 |----------|----------|
 |A Raspberry Pi 3 or PC or any other IoT device that runs on Linux.|Raspbian Buster installed on your Raspberry Pi 3 or Debian (Ubuntu) installed on your PC.|
-|NodeMCU ESP8266 for WiFi communication and devices you want to control (lights, temperature sensors, etc.).|Basic understanding of programming micro controller in C/C++, IoT network protocols and devices wiring.|
-|A router to create a wireless local area network, with an internet connection to connect your Raspberry Pi to the internet.|An internet browser and mobile application to access the user interface of the smart home system.
+|NodeMCU ESP8266 for WiFi communication, DS18B20 temperature sensor,LED 7seg 4 digit display and button.|Basic understanding of programming micro controller in C/C++, IoT network protocols and devices wiring.|
+|Internet connection for Raspberry Pi via Ethernet.|
 
 ### Installation
 
