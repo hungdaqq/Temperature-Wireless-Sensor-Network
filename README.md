@@ -62,7 +62,7 @@ Temperature monitoring is a crucial aspect in various industries such as agricul
 - Computer connection: RF Transmission distance of up to 20 meters from measuring devices to the RF receiving station with power and network connection.
 - Ability to manage a minimum of 10 measuring devices (expandable to 100 meters with advanced setup).
 - Computer software: Collects measured values, manages data, exports reports in excel format, and has a user-friendly interface.
-- User's manipulation: Start button, temperature threshold LEDs (3 LEDs), and the ability to update temperature thresholds from a computer.
+- User interface: Start button, temperature threshold LEDs (3 LEDs), and the ability to update temperature thresholds from computer software.
 - OTA update.
 
 <!-- GETTING STARTED -->
