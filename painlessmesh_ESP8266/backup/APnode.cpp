@@ -19,7 +19,7 @@ Led4digit74HC595 display(D1,D2,D3);
 // setting temperature threshold
 const int red = 60;
 const int yellow = 40;
-const int green = 20;
+const int green = 30;
 // define temoerature sensor
 const int oneWireBus = D4; 
 OneWire oneWire(oneWireBus);
@@ -119,7 +119,7 @@ void setup() {
   display.setDecimalPoint(2); 
   // init the mesh
   mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | COMMUNICATION );
-  mesh.init( MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT);
+  mesh.init( MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT, WIFI_AP_STA, 6);
   // callback for updating the mesh
   mesh.onReceive(&receivedCallback);
   mesh.onNewConnection(&newConnectionCallback);

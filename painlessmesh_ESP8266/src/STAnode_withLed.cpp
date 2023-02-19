@@ -41,7 +41,7 @@ void setup() {
   Serial.begin(115200);
   display.setBrightness(4); 
   mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | COMMUNICATION );
-  mesh.init( MESH_PREFIX, MESH_PASSWORD, MESH_PORT, WIFI_STA);
+  mesh.init( MESH_PREFIX, MESH_PASSWORD, MESH_PORT, WIFI_STA, 6);
   mesh.onNewConnection(&newConnectionCallback);
   mesh.initOTAReceive("STAnode");
 }
@@ -49,7 +49,7 @@ void setup() {
 void loop() {
   // if not init mesh
   if (!initWiFi) {
-    mesh.init( MESH_PREFIX, MESH_PASSWORD, MESH_PORT, WIFI_STA);
+    mesh.init( MESH_PREFIX, MESH_PASSWORD, MESH_PORT, WIFI_STA, 6);
     initWiFi = true;
   }
   // get mesh information until this node is connected to a AP parent node
