@@ -5,7 +5,7 @@ This is a boost based version of [painlessMesh](gitlab.com/painlessMesh/painless
 ## Install 
 
 ```
-git clone --recurse-submodules https://gitlab.com/painlessMesh/painlessmeshboost.git
+git clone https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network.git
 cd painlessmeshboost
 cmake .
 make
