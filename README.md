@@ -1,23 +1,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/hungdaqq/Smarthome-IoT">
+  <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">
     <img src="images/smarthome.jpg" alt="Logo" width="800" height="420">
   </a>
 
-<h3 align="center">Smart Home IoT</h3>
+<h3 align="center">Wireless Temperature Sensor Network</h3>
 
   <p align="center">
-    My final project of IoT Network and Protocol course (semester 2022.1)
+    My final project of Wireless Sensor Network course (semester 2022.1)
     <br />
     <a href="https://docs.google.com/document/d/1b8eUY19hVWinYOA9YIkjcR_toliwRPs9/edit?usp=sharing&ouid=113352961761938394358&rtpof=true&sd=true"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/hungdaqq/Smarthome-IoT">View Demo</a>
+    <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">View Demo</a>
     ·
-    <a href="https://github.com/hungdaqq/Smarthome-IoT/issues">Report Bug</a>
+    <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">Report Bug</a>
     ·
-    <a href="https://github.com/hungdaqq/Smarthome-IoT/issues">Request Feature</a>
+    <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">Request Feature</a>
   </p>
 </div>
 
@@ -67,7 +67,7 @@ Temperature monitoring is a crucial aspect in various industries such as agricul
 ## Getting Started
 <br />
 <div align="center">
-  <a href="https://github.com/hungdaqq/Smarthome-IoT">
+  <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">
     <img src="images/diagram.png" alt="Logo" width="800" height="630">
   </a>
 </div>
