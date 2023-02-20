@@ -25,6 +25,7 @@ void sendMessage(){
   // get sensor temperature
   sensors.requestTemperatures();
   temperature = sensors.getTempCByIndex(0);
+  DynamicJsonDocument doc(1024);
   // display on LE 7seg 4 digit
   // display.showNumberDec(round(temperature*10));
   // broadcast message
@@ -43,7 +44,7 @@ void setup() {
   mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | COMMUNICATION );
   mesh.init( MESH_PREFIX, MESH_PASSWORD, MESH_PORT, WIFI_STA);
   mesh.onNewConnection(&newConnectionCallback);
-  mesh.initOTAReceive("stanode");
+  mesh.initOTAReceive("STAnode");
 }
 // program loop
 void loop() {

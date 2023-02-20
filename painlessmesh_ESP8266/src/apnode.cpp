@@ -13,13 +13,13 @@ painlessMesh  mesh;
 Led4digit74HC595 display(D1,D2,D3);
 // define led and button pin
 #define BUTTON D5
-#define RED D6
+#define RED D8
 #define YELLOW D7
-#define GREEN D8
+#define GREEN D6
 // setting temperature threshold
-const int red = 60;
-const int yellow = 40;
-const int green = 30;
+int red = 60;
+int yellow = 40;
+int green = 30;
 // define temoerature sensor
 const int oneWireBus = D4; 
 OneWire oneWire(oneWireBus);
@@ -76,11 +76,15 @@ void sendMessage(){
     // thresholding leds
     if (temperature <= green)
       setLight('g');
-    else if (temperature <= yellow && temperature > green)
-      setLight('y');
-    else
+    else if (temperature >= red)
       setLight('r');
+    else
+      setLight('y');
     // broadcast msg
+    // DynamicJsonDocument doc(1024);
+    // String msg;
+    // doc["TEMPERATURE"]  = temperature;
+    // serializeJson(doc, msg);
     String msg = String(temperature,4);
     mesh.sendBroadcast(msg);
     // delay time calculation
@@ -96,7 +100,26 @@ void sendMessage(){
   }
 }
 // callback function
-void receivedCallback( uint32_t from, String &msg ) {}
+void receivedCallback( uint32_t from, String &msg ) {
+  String json = msg.c_str();
+  DynamicJsonDocument doc(1024);
+  DeserializationError error = deserializeJson(doc, json);
+  if (error)
+  {
+    Serial.print("deserializeJson() failed: ");
+    Serial.println(error.c_str());
+  }
+  // if(doc.containsKey("GREEN") && doc.containsKey("YELLOW") && doc.containsKey("RED")) {
+  if(doc.containsKey("GREEN")) {
+    green = doc["GREEN"];
+  }
+  else if(doc.containsKey("YELLOW")) {
+    yellow = doc["YELLOW"];
+  }
+  else if(doc.containsKey("RED")) {
+    red = doc["RED"];
+  }
+}
 void nodeTimeAdjustedCallback(int32_t offset) {}
 void delayReceivedCallback(uint32_t from, int32_t delay) {}
 void droppedConnectionCallback(uint32_t nodeId) {
