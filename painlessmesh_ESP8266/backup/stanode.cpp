@@ -25,8 +25,8 @@ void sendMessage(){
   // get sensor temperature
   sensors.requestTemperatures();
   temperature = sensors.getTempCByIndex(0);
-  DynamicJsonDocument doc(1024);
-  // display on LE 7seg 4 digit
+  // DynamicJsonDocument doc(1024);
+  // display on LED 7seg 4 digit
   // display.showNumberDec(round(temperature*10));
   // broadcast message
   String msg = String(temperature,4);
