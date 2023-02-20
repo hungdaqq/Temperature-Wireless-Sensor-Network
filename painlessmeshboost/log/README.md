@@ -6,9 +6,9 @@ Features:
 - Batching updates.
 
 ## Installation
-``
+```
 pip3 install gspread
-``
+```
 
 Requirements: Python 3.6+.
 
@@ -17,11 +17,12 @@ Requirements: Python 3.6+.
 1. [Create credentials in Google API Console](https://docs.gspread.org/en/latest/oauth2.html)
 2. Run painlessMeshBoost as a client of the mesh. With `<ip>` is the default route. You can set log level as the message you want your client to listen to. For example: `receive`, `change`,... And then log terminial into a `.txt` files.
 
-``
+```
 painlessMeshBoost -c <ip> >> terminal_log.txt
-``
+```
+
 3. Run `log.py` with the credential and API created from step 1.
-``
+```
 python3 log.py
-``
+```
 4. Open the spreadsheet and see the result.
