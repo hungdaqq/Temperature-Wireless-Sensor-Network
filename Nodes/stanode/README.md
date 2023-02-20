@@ -13,4 +13,4 @@
 3. Placed in the proper position.
 
 ## Feature
-- Power-saving (sleep in 99% life-time).
+- Power-saving (sleep in 99% of their life time).
