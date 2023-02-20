@@ -50,3 +50,6 @@ painlessMeshBoost --ota-dir /path/to/firmware/directory
 
 This causes painlessMeshBoost to start monitoring that directory. When you copy/move new firmware into that directory it will be distributed to the nodes. New firmware should follow the naming scheme: `firmware_<hardware>_<role>.bin` in order for it to be send to th correct hardware/node type. Supported hardware values are ESP32 or ESP8266.
 
+### Google Sheet upload
+
+Please refer to [log](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmeshboost/log) for instruction.
