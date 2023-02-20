@@ -38,8 +38,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -62,7 +60,7 @@ Temperature monitoring is a crucial aspect in various industries such as agricul
 - Computer connection: RF Transmission distance of up to 20 meters from measuring devices to the RF receiving station with power and network connection.
 - Ability to manage a minimum of 10 measuring devices (expandable to 100 meters with advanced setup).
 - Computer software: Collects measured values, manages data, exports reports in excel format, and has a user-friendly interface.
-- User's manipulation: Start button, temperature threshold LEDs (3 LEDs), and the ability to update temperature thresholds from a computer.
+- User interface: Start button, temperature threshold LEDs (3 LEDs), and the ability to update temperature thresholds from computer software.
 - OTA update.
 
 <!-- GETTING STARTED -->
@@ -79,44 +77,19 @@ Before getting started with the project, you will need the following:
 | Hardware | Software |
 |----------|----------|
 |A Raspberry Pi 3 or PC or any other IoT device that runs on Linux.|Raspbian Buster installed on your Raspberry Pi 3 or Debian (Ubuntu) installed on your PC.|
-|NodeMCU ESP8266 for WiFi communication and devices you want to control (lights, temperature sensors, etc.).|Basic understanding of programming micro controller in C/C++, IoT network protocols and devices wiring.|
-|A router to create a wireless local area network, with an internet connection to connect your Raspberry Pi to the internet.|An internet browser and mobile application to access the user interface of the smart home system.
+|NodeMCU ESP8266 for WiFi communication, DS18B20 temperature sensor, LED 7 seg 4 digit display and button.|Basic understanding of programming micro controller in C/C++, IoT network protocols and devices wiring.|
+|Internet connection for Raspberry Pi via Ethernet.|
 
 ### Installation
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/hungdaqq/Smarthome-IoT.git
+   https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network.git
    ```
-2. Create a Thingsboard account at https://demo.thingsboard.io/ and login to use Thingsboard Live Demo server. Then go to [Thingsboard](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Thingsboard) for a quick overview of this open-source IoT platform.
-3. Follow the instructions to install [Thingsboard Edge CE](https://thingsboard.io/docs/user-guide/install/edge/installation-options/) v3.4.3 and provision your Edge to the Server.
-4. Get and install the ThingsBoardLive on [App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695) or [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app&hl=vi&gl=US).
-5. Please refer to [ESP8266](https://github.com/hungdaqq/Smarthome-IoT/tree/main/ESP8266) for setting up micro controllers programming evironment and [Features](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Features) for ThingsBoard configuration as well as connecting the electronics components in accordance with the hardware schema.
-6. (Optional) Follow the instructions to install [Thingsboard IoT Gateway](https://thingsboard.io/docs/iot-gateway/installation/) v2.9 on your Raspberry Pi or PC if you want integrate devices that are connected to legacy and third-party systems with ThingsBoard IoT platform. For example: external MQTT brokers, OPC-UA servers, Sigfox Backend, Modbus slaves or CAN nodes.
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-1. Start Edge service by running the script:
-   ```sh
-   sudo service tb-edge start
-   ```
-2. Access the user interface by opening a web browser and navigating to https://demo.thingsboard.io/home or using ThingsBoardLive mobile application.
-3. Use the interface to control the devices and other features in your home.
-
-
-<!-- ROADMAP -->
-## Roadmap and Future work
-
-- [x] Indoor temperature monitoring
-- [x] Outdoor temperature, humidity monitoring (with OpenWeather API)
-- [x] Light and Household applicances control
-- [x] Create alarms, send emails and notifications.
-- [ ] Power consumption and charging monitoring
-- [ ] Devices claming (QR code)
-- [ ] Data analytics with Trendz
-
-See the [open issues](https://github.com/hungdaqq/Smarthome-IoT/issues) for a full list of proposed features (and known issues).
+2. Setting up micro controllers programming environment in [painlessmesh_ESP8266](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmesh_ESP8266).
+3. Follow [Nodes](https://github.com/hungdaqq/Smarthome-IoT/tree/main/Features) to program sensor nodes, connect the electronics components in accordance with the hardware schema and configure the wireless mesh network.
+4. Follow [painlessmeshboost](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/painlessmeshboost) to set up boost client and upload data to Google Sheet via Google API.
+5. For online firmware updates, please refer to [OTA](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/tree/main/OTA).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -134,7 +107,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Quang Hung Dang - [@hungdaqq](https://www.linkedin.com/in/hungdaqq/) - hungdaqq@gmail.com
 
-Project Link: [https://github.com/hungdaqq/Smarthome-IoT/](https://github.com/hungdaqq/Smarthome-IoT/)
+Project Link: [https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network)
 
 
 <!-- ACKNOWLEDGMENTS -->
