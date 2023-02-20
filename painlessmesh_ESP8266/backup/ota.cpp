@@ -11,95 +11,64 @@
 // If sending to the otacreceiver sketch, role should be
 // "otareceiver" (lowercase)
 //
+// This sketch assumes a Nodemcu-32s with an SD card
+// connected as shown in the jpg included in the sketch folder
+// This code may have to be reworked/hardware adjusted for
+// other boards or ESP8266. The core code works well though
+//
+// MAKE SURE YOUR UPLOADED OTA FIRMWARE INCLUDES OTA SUPPORT 
+// OR YOU WILL LOSE THE ABILITY TO UPLOAD MORE FIRMWARE.
+// THE INCLUDED .bin DOES NOT HAVE OTA SUPPORT SO THIS MUST BE
+// REFLASHED
 //************************************************************
-#include "IPAddress.h"
 #include "painlessMesh.h"
 
-#ifdef ESP8266
-#include "Hash.h"
-#include <ESPAsyncTCP.h>
-#else
-#include <AsyncTCP.h>
-#endif
-#include <ESPAsyncWebServer.h>
+#include <FS.h>
+#include "SD.h"
+#include "SPI.h"
 
-
-#define   STATION_SSID     "4H"
-#define   STATION_PASSWORD "88998899"
-#define HOSTNAME "HTTP_BRIDGE"
-
-#define MESH_PREFIX "ESP WIFI MESH"
+#define MESH_PREFIX "CORDYCEPS"
 #define MESH_PASSWORD "12345678"
 #define MESH_PORT 5555
 
 #define OTA_PART_SIZE 1024 //How many bytes to send per OTA data packet
 
-// Prototype
-void receivedCallback( const uint32_t &from, const String &msg );
-IPAddress getlocalIP();
+painlessMesh mesh;
 
-painlessMesh  mesh;
-AsyncWebServer server(80);
-IPAddress myIP(0,0,0,0);
-IPAddress myAPIP(0,0,0,0);
-
-//-----------------------------------------------------------------------------
-void setup(){
+void setup() {
   Serial.begin(115200);
   delay(1000);
   mesh.setDebugMsgTypes(
       ERROR | STARTUP | CONNECTION |
       DEBUG);  // set before init() so that you can see startup messages
 
-  // Channel set to 6. Make sure to use the same channel for your mesh and for you other
-  // network (STATION_SSID)
-  mesh.init( MESH_PREFIX, MESH_PASSWORD, MESH_PORT, WIFI_AP_STA, 6 );
-  mesh.onReceive(&receivedCallback);
+  mesh.init(MESH_PREFIX, MESH_PASSWORD, MESH_PORT);
 
-  mesh.stationManual(STATION_SSID, STATION_PASSWORD);
-  mesh.setHostname(HOSTNAME);
-
-  // Bridge node, should (in most cases) be a root node. See [the wiki](https://gitlab.com/painlessMesh/painlessMesh/wikis/Possible-challenges-in-mesh-formation) for some background
+  // Bridge node, should (in most cases) be a root node. See [the
+  // wiki](https://gitlab.com/painlessMesh/painlessMesh/wikis/Possible-challenges-in-mesh-formation)
+  // for some background
   mesh.setRoot(true);
-  // This node and all other nodes should ideally know the mesh contains a root, so call this on all nodes
+  // This node and all other nodes should ideally know the mesh contains a root,
+  // so call this on all nodes
   mesh.setContainsRoot(true);
 
-  myAPIP = IPAddress(mesh.getAPIP());
-  Serial.println("My AP IP is " + myAPIP.toString());
+  delay(1000);
 
-  //Async webserver
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(200, "text/html", 
-    "<form method='POST' action='/runupdate' enctype='multipart/form-data' id='upload_form'>Select file"
-    "<input type='file' name='update'>"
-    "<input type='submit' value='Upload'></form>");
-    
-  });
 
-  server.on("/runupdate", HTTP_POST, [](AsyncWebServerRequest *request){
-    // here the file uploaded from the webpage is passed
-    // to the function OTAmesh() 
-    //OTAmesh();
-    request->send(200, "text/html". "Update in progress");
-  });
-  
-  server.begin();
-} //end of setup
-
-//-------------------------------------------------
-
-void loop(){
-  mesh.update();
-  if(myIP != getlocalIP()){
-    myIP = getlocalIP();
-    Serial.println("My IP is " + myIP.toString());
+  if (!SD.begin()) {
+    rebootEspWithReason("Could not mount SD card, restarting");
   }
- }
-//--------------------------------------------------
 
-void OTAmesh(File entry){ //over the mesh firmware update
-  //This block of code parses the file name to make sure it is valid.
+  File dir = SD.open("/");
+  while (true) {
+    File entry = dir.openNextFile();
+    if (!entry) { //End of files
+      rebootEspWithReason("Could not find valid firmware, please validate");
+    }
+
+    //This block of code parses the file name to make sure it is valid.
     //It will also get the role and hardware the firmware is targeted at.
+    if (!entry.isDirectory()) {
       TSTRING name = entry.name();
       if (name.length() > 1 && name.indexOf('_') != -1 &&
           name.indexOf('_') != name.lastIndexOf('_') &&
@@ -153,26 +122,22 @@ void OTAmesh(File entry){ //over the mesh firmware update
           mesh.offerOTA(role, hardware, md5.toString(),
                         ceil(((float)entry.size()) / OTA_PART_SIZE), false);
 
-        
+          while (true) {
+            //This program will not reach loop() so we dont have to worry about
+            //file scope.
+            mesh.update();
+            usleep(1000);
+          }
+        }
       }
     }
-}//end of OTAmesh
-//------------------------------------------------
-
-
-void receivedCallback( const uint32_t &from, const String &msg ) {
-  Serial.printf("bridge: Received from %u msg=%s\n", from, msg.c_str());
-}
-//---------------------------------------------------
-IPAddress getlocalIP() {
-  return IPAddress(mesh.getStationIP());
+  }
 }
 
-//-----------------------------------------------------
 void rebootEspWithReason(String reason) {
   Serial.println(reason);
   delay(1000);
   ESP.restart();
 }
 
-//-----------------------------------------------------
+void loop(){};
