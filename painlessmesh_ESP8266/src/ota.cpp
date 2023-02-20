@@ -32,8 +32,15 @@
 #define MESH_PORT 5555
 
 #define OTA_PART_SIZE 1024 //How many bytes to send per OTA data packet
+#define CS_PIN  D8
 
 painlessMesh mesh;
+
+void rebootEspWithReason(String reason) {
+  Serial.println(reason);
+  delay(1000);
+  ESP.restart();
+}
 
 void setup() {
   Serial.begin(115200);
@@ -54,8 +61,7 @@ void setup() {
 
   delay(1000);
 
-
-  if (!SD.begin()) {
+  if (!SD.begin(CS_PIN)) {
     rebootEspWithReason("Could not mount SD card, restarting");
   }
 
@@ -126,18 +132,13 @@ void setup() {
             //This program will not reach loop() so we dont have to worry about
             //file scope.
             mesh.update();
-            usleep(1000);
+            // usleep(1000);
+            delay( 1000 );
           }
         }
       }
     }
   }
-}
-
-void rebootEspWithReason(String reason) {
-  Serial.println(reason);
-  delay(1000);
-  ESP.restart();
 }
 
 void loop(){};
