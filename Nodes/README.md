@@ -8,6 +8,6 @@ We perform this project on the sixth floor of the Ta Quang Buu Library, Hanoi Un
 <br />
 <div align="center">
   <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">
-    <img src="./Images/diagram.png" alt="Logo" width="800" height="630">
+    <img src="diagram.png" alt="Logo" width="800" height="630">
   </a>
 </div>
