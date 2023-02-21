@@ -68,7 +68,7 @@ Temperature monitoring is a crucial aspect in various industries such as agricul
 <br />
 <div align="center">
   <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">
-    <img src="images/diagram.png" alt="Logo" width="800" height="630">
+    <img src="Images/diagram.png" alt="Logo" width="800" height="630">
   </a>
 </div>
 
