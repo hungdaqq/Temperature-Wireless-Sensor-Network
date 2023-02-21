@@ -9,5 +9,5 @@ When the distribution node receives a data request, it sends the data back to th
 1. Replace `painlessmesh_ESP8266/src` with the `.cpp` file `ota.cpp`, then upload the code to the NodeMCU.
 2. Connect the parts in line with the following hardware schemas:  
 ![Schema1](https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/blob/main/OTA/microsd.png)  
-3. Build a File system image, result in a `spinff.bin`. You have to rename the file according to the device and role. For example: `firmware_ESP8266_apnode.bin`. Move this file to a microSD card. 
-4. Insert the SD card to the module.
+3. Build a File system image, result in a `spinff.bin`. You have to rename the file according to the device and role. For example: `firmware_ESP8266_apnode.bin`. Copy this file to a microSD card. 
+4. Insert the microSD card to the module.
