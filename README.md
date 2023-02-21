@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">
-    <img src="images/smarthome.jpg" alt="Logo" width="800" height="420">
+    <img src="Images/Wireless-Sensor-Network.png" alt="Logo" width="400" height="200">
   </a>
 
 <h3 align="center">Wireless Temperature Sensor Network</h3>
