@@ -3,6 +3,8 @@
 - 01 NodeMCU ESP8266 
 - 01 Push button 9 (4 pin)
 - 01 Temperature Sensor DS18B20
+- 01 Traffic LED
+- 01 Module LED 7 seg 4 digit
 - microUSB cable
 - LiPo battery
 
