@@ -49,7 +49,7 @@ void setup() {
       ERROR | STARTUP | CONNECTION |
       DEBUG);  // set before init() so that you can see startup messages
 
-  mesh.init(MESH_PREFIX, MESH_PASSWORD, MESH_PORT);
+  mesh.init(MESH_PREFIX, MESH_PASSWORD, MESH_PORT, WIFI_AP_STA, 6);
 
   // Bridge node, should (in most cases) be a root node. See [the
   // wiki](https://gitlab.com/painlessMesh/painlessMesh/wikis/Possible-challenges-in-mesh-formation)
@@ -79,7 +79,7 @@ void setup() {
       if (name.length() > 1 && name.indexOf('_') != -1 &&
           name.indexOf('_') != name.lastIndexOf('_') &&
           name.indexOf('.') != -1) {
-        TSTRING firmware = name.substring(1, name.indexOf('_'));
+        TSTRING firmware = name.substring(0, name.indexOf('_'));
         TSTRING hardware =
             name.substring(name.indexOf('_') + 1, name.lastIndexOf('_'));
         TSTRING role =

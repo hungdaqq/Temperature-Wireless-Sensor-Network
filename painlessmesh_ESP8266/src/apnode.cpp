@@ -17,9 +17,9 @@ Led4digit74HC595 display(D1,D2,D3);
 #define YELLOW D7
 #define GREEN D6
 // setting temperature threshold
-int red = 60;
-int yellow = 40;
-int green = 30;
+int red = 15;
+int yellow = 10;
+int green = 5;
 // define temoerature sensor
 const int oneWireBus = D4; 
 OneWire oneWire(oneWireBus);
