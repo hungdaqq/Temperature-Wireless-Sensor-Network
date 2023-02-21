@@ -65,13 +65,6 @@ Temperature monitoring is a crucial aspect in various industries such as agricul
 
 <!-- GETTING STARTED -->
 ## Getting Started
-<br />
-<div align="center">
-  <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">
-    <img src="Images/diagram.png" alt="Logo" width="800" height="630">
-  </a>
-</div>
-
 ### Prerequisites
 Before getting started with the project, you will need the following:
 | Hardware | Software |
