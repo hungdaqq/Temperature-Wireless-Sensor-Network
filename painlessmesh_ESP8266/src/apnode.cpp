@@ -104,21 +104,17 @@ void receivedCallback( uint32_t from, String &msg ) {
   String json = msg.c_str();
   DynamicJsonDocument doc(1024);
   DeserializationError error = deserializeJson(doc, json);
-  if (error)
-  {
+  if (error) {
     Serial.print("deserializeJson() failed: ");
     Serial.println(error.c_str());
   }
   // if(doc.containsKey("GREEN") && doc.containsKey("YELLOW") && doc.containsKey("RED")) {
-  if(doc.containsKey("GREEN")) {
+  if(doc.containsKey("GREEN")) 
     green = doc["GREEN"];
-  }
-  else if(doc.containsKey("YELLOW")) {
+  else if(doc.containsKey("YELLOW")) 
     yellow = doc["YELLOW"];
-  }
-  else if(doc.containsKey("RED")) {
+  else if(doc.containsKey("RED")) 
     red = doc["RED"];
-  }
 }
 void nodeTimeAdjustedCallback(int32_t offset) {}
 void delayReceivedCallback(uint32_t from, int32_t delay) {}
