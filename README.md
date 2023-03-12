@@ -10,7 +10,7 @@
   <p align="center">
     My final project of Wireless Sensor Network course (semester 2022.1)
     <br />
-    <a href="https://docs.google.com/document/d/1b8eUY19hVWinYOA9YIkjcR_toliwRPs9/edit?usp=sharing&ouid=113352961761938394358&rtpof=true&sd=true"><strong>Explore the docs »</strong></a>
+    <a href=""><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/hungdaqq/Temperature-Wireless-Sensor-Network/">View Demo</a>
