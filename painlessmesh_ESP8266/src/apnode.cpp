@@ -17,9 +17,9 @@ Led4digit74HC595 display(D1,D2,D3);
 #define YELLOW D7
 #define GREEN D6
 // setting temperature threshold
-int red = 15;
-int yellow = 10;
-int green = 5;
+int red = 60;
+int yellow = 30;
+int green = 20;
 // define temoerature sensor
 const int oneWireBus = D4; 
 OneWire oneWire(oneWireBus);
@@ -87,6 +87,7 @@ void sendMessage(){
     // serializeJson(doc, msg);
     String msg = String(temperature,4);
     mesh.sendBroadcast(msg);
+    nodes = mesh.getNodeList();
     // delay time calculation
     if (calc_delay) {
       SimpleList<uint32_t>::iterator node = nodes.begin();
@@ -108,7 +109,6 @@ void receivedCallback( uint32_t from, String &msg ) {
     Serial.print("deserializeJson() failed: ");
     Serial.println(error.c_str());
   }
-  // if(doc.containsKey("GREEN") && doc.containsKey("YELLOW") && doc.containsKey("RED")) {
   if(doc.containsKey("GREEN")) 
     green = doc["GREEN"];
   else if(doc.containsKey("YELLOW")) 
@@ -117,7 +117,9 @@ void receivedCallback( uint32_t from, String &msg ) {
     red = doc["RED"];
 }
 void nodeTimeAdjustedCallback(int32_t offset) {}
-void delayReceivedCallback(uint32_t from, int32_t delay) {}
+void delayReceivedCallback(uint32_t from, int32_t delay) {
+  Serial.printf("Delay to node %u is %d us\n", from, delay);
+}
 void droppedConnectionCallback(uint32_t nodeId) {
   nodes = mesh.getNodeList();
   if (nodes.size() == 0)
@@ -137,7 +139,8 @@ void setup() {
   // set decimal point of 7seg LED display
   display.setDecimalPoint(2); 
   // init the mesh
-  mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | COMMUNICATION );
+  // mesh.setDebugMsgTypes( ERROR | DEBUG | MESH_STATUS | CONNECTION | COMMUNICATION );
+  mesh.setDebugMsgTypes( ERROR | DEBUG );
   mesh.init( MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT, WIFI_AP_STA, 6);
   // callback for updating the mesh
   mesh.onReceive(&receivedCallback);
@@ -166,7 +169,7 @@ void loop() {
   // Update mesh information, the mesh won't work without it
   mesh.update();
   // blink red light while the mesh is forming
-  if(!connect) {
+  if(!connect) { 
     display.sleep();
     delay(250);
     setLight('r');

@@ -16,9 +16,9 @@ bool stateSet = false;
 bool oldStateSet = false;
 painlessMesh  mesh;
 
-int green = 5;
-int yellow = 10;
-int red = 15;
+int green = 20;
+int yellow = 30;
+int red = 60;
 
 void sendMessage() {
   DynamicJsonDocument doc(1024);

@@ -1,1 +1,50 @@
 setLogLevel: ERROR |
+
+setLogLevel: ERROR |
+{"event":"connect","nodeTime":1515137371,"time":"2023-02-22T16:16:35","nodeId":2224959197, "layout":{"nodeId":821004754,"subs":[{"nodeId":2224959197,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":976103663,"subs":[{"nodeId":840640289}]}]},{"nodeId":2224952961,"subs":[{"nodeId":2224877835},{"nodeId":2224948347}]}]}]}}
+{"event":"change","nodeTime":1515137543,"time":"2023-02-22T16:16:35", "layout":{"nodeId":821004754,"subs":[{"nodeId":2224959197,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":976103663,"subs":[{"nodeId":840640289}]}]},{"nodeId":2224952961,"subs":[{"nodeId":2224877835},{"nodeId":2224948347}]}]}]}}
+{"event":"offset","nodeTime":4108488745,"time":"2023-02-22T16:16:35","offset":-1701630366}
+{"event":"offset","nodeTime":4108708852,"time":"2023-02-22T16:16:35","offset":3000}
+{"event":"receive","nodeTime":4110044753,"time":"2023-02-22T16:16:36","nodeId":2224959197,"msg":"-127.0000"}
+{"event":"receive","nodeTime":4110448169,"time":"2023-02-22T16:16:37","nodeId":2224948347,"msg":"24.5000"}
+{"event":"receive","nodeTime":4118405308,"time":"2023-02-22T16:16:45","nodeId":976103663,"msg":"27.5000"}
+{"event":"receive","nodeTime":4128235892,"time":"2023-02-22T16:16:54","nodeId":2224952961,"msg":"23.6875"}
+{"event":"receive","nodeTime":4129466094,"time":"2023-02-22T16:16:56","nodeId":762290248,"msg":"23.8750"}
+{"event":"receive","nodeTime":4147488240,"time":"2023-02-22T16:17:14","nodeId":2224877835,"msg":"24.5000"}
+{"event":"receive","nodeTime":4163667467,"time":"2023-02-22T16:17:30","nodeId":3896290393,"msg":"24.9375"}
+{"event":"offset","nodeTime":4168741548,"time":"2023-02-22T16:17:35","offset":-25421}
+{"event":"offset","nodeTime":4168780057,"time":"2023-02-22T16:17:35","offset":32873}
+{"event":"offset","nodeTime":4168981710,"time":"2023-02-22T16:17:35","offset":-10450}
+{"event":"offset","nodeTime":4169194425,"time":"2023-02-22T16:17:35","offset":87}
+{"event":"receive","nodeTime":4169506296,"time":"2023-02-22T16:17:36","nodeId":2224959197,"msg":"-127.0000"}
+{"event":"change","nodeTime":4175340852,"time":"2023-02-22T16:17:42", "layout":{"nodeId":821004754,"subs":[{"nodeId":2224959197,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248,"subs":[{"nodeId":976460655}]},{"nodeId":976103663,"subs":[{"nodeId":840640289}]}]},{"nodeId":2224952961,"subs":[{"nodeId":2224877835},{"nodeId":2224948347}]}]}]}}
+{"event":"receive","nodeTime":4178923999,"time":"2023-02-22T16:17:45","nodeId":976103663,"msg":"27.5000"}
+{"event":"change","nodeTime":4187012650,"time":"2023-02-22T16:17:53", "layout":{"nodeId":821004754,"subs":[{"nodeId":2224959197,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248,"subs":[{"nodeId":976460655}]},{"nodeId":976103663,"subs":[{"nodeId":840640289}]}]},{"nodeId":2224952961,"subs":[{"nodeId":2224877835}]}]}]}}
+{"event":"receive","nodeTime":4188855100,"time":"2023-02-22T16:17:55","nodeId":2224952961,"msg":"23.8125"}
+{"event":"receive","nodeTime":4189891732,"time":"2023-02-22T16:17:56","nodeId":762290248,"msg":"23.9375"}
+{"event":"offset","nodeTime":4195401165,"time":"2023-02-22T16:18:02","offset":-1296}
+{"event":"receive","nodeTime":4205033640,"time":"2023-02-22T16:18:11","nodeId":976460655,"msg":"-127.0000"}
+{"event":"receive","nodeTime":4208064423,"time":"2023-02-22T16:18:14","nodeId":2224877835,"msg":"24.5000"}
+{"event":"receive","nodeTime":4224080172,"time":"2023-02-22T16:18:30","nodeId":3896290393,"msg":"24.9375"}
+{"event":"receive","nodeTime":4229662247,"time":"2023-02-22T16:18:36","nodeId":2224959197,"msg":"-127.0000"}
+{"event":"receive","nodeTime":4239447781,"time":"2023-02-22T16:18:46","nodeId":976103663,"msg":"27.5000"}
+{"event":"receive","nodeTime":4249175556,"time":"2023-02-22T16:18:55","nodeId":2224952961,"msg":"23.7500"}
+{"event":"receive","nodeTime":4250511880,"time":"2023-02-22T16:18:57","nodeId":762290248,"msg":"23.9375"}
+{"event":"offset","nodeTime":4255417215,"time":"2023-02-22T16:19:02","offset":-424}
+{"event":"offset","nodeTime":4255421459,"time":"2023-02-22T16:19:02","offset":-353}
+{"event":"offset","nodeTime":4255447566,"time":"2023-02-22T16:19:02","offset":-17706}
+{"event":"offset","nodeTime":4255681176,"time":"2023-02-22T16:19:02","offset":20009}
+{"event":"offset","nodeTime":4255892109,"time":"2023-02-22T16:19:02","offset":-415}
+{"event":"receive","nodeTime":4265657267,"time":"2023-02-22T16:19:12","nodeId":976460655,"msg":"-127.0000"}
+{"event":"receive","nodeTime":4268523260,"time":"2023-02-22T16:19:15","nodeId":2224877835,"msg":"24.5000"}
+{"event":"receive","nodeTime":4284499145,"time":"2023-02-22T16:19:31","nodeId":3896290393,"msg":"24.9375"}
+{"event":"receive","nodeTime":4289933284,"time":"2023-02-22T16:19:36","nodeId":2224959197,"msg":"-127.0000"}
+{"event":"receive","nodeTime":5103497,"time":"2023-02-22T16:19:46","nodeId":976103663,"msg":"27.4375"}
+{"event":"receive","nodeTime":14724090,"time":"2023-02-22T16:19:56","nodeId":2224952961,"msg":"23.8125"}
+{"event":"receive","nodeTime":15950272,"time":"2023-02-22T16:19:57","nodeId":762290248,"msg":"23.9375"}
+{"event":"change","nodeTime":19433103,"time":"2023-02-22T16:20:01", "layout":{"nodeId":821004754,"subs":[{"nodeId":2224959197,"subs":[{"nodeId":3896290393,"subs":[{"nodeId":762290248},{"nodeId":976103663,"subs":[{"nodeId":840640289}]}]},{"nodeId":2224952961,"subs":[{"nodeId":2224877835}]}]}]}}
+{"event":"offset","nodeTime":20490965,"time":"2023-02-22T16:20:02","offset":9400}
+{"event":"offset","nodeTime":20590945,"time":"2023-02-22T16:20:02","offset":-146391}
+{"event":"offset","nodeTime":20940413,"time":"2023-02-22T16:20:02","offset":137823}
+{"event":"offset","nodeTime":21150064,"time":"2023-02-22T16:20:02","offset":-3543}
+{"event":"offset","nodeTime":21155313,"time":"2023-02-22T16:20:02","offset":-1825}
